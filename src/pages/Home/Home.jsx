@@ -1,8 +1,7 @@
 import React from "react";
-import conf from "../../conf/conf";
 
 function Home() {
-  return <div>{conf.apiKey}</div>;
+  return <div>Home</div>;
 }
 
 export default Home;

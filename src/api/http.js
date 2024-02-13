@@ -9,8 +9,6 @@ export class Http {
       Authorization: "Bearer " + conf.tokenKey,
     };
 
-    console.log(conf.url);
-    console.log(conf.tokenKey);
     //fetch
     const data = await fetch(url, {
       headers,

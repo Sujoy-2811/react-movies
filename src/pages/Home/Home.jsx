@@ -13,7 +13,7 @@ function Home() {
   console.log(data.results[0]);
   return (
     <div>
-      <ul className="grid grid-cols-2 gap-5 sm:grid-cols-4 sm:gap-8">
+      <ul className="grid grid-cols-2 gap-5 sm:grid-cols-5 sm:gap-8">
         {data.results.map((item) => (
           <Card key={item.id} content={item} />
         ))}

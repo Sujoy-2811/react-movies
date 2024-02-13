@@ -13,7 +13,7 @@ function Card({
   },
 }) {
   return (
-    <div className="border border-solid  p-1 min-w-40 bg-black text-white flex flex-col items-center">
+    <div className="border border-solid border-black  p-1 min-w-40 bg-black text-white flex flex-col items-center">
       <img
         className="rounded-3lg"
         src={`${conf.posterImageSmall}${poster_path}`}

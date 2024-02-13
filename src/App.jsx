@@ -4,6 +4,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import "./App.css";
 
@@ -12,6 +13,7 @@ import Header from "./components/ui/Header";
 import { Home, Movies, Search, Series } from "./pages";
 
 function App() {
+  const queryClient = new QueryClient();
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Layout />}>
@@ -24,11 +26,9 @@ function App() {
   );
 
   return (
-    <RouterProvider router={router}>
-      <div className=" min-h-[100vh] bg-gray-500 text-white ">
-        <Header />
-      </div>
-    </RouterProvider>
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router}></RouterProvider>
+    </QueryClientProvider>
   );
 }
 

@@ -8,7 +8,7 @@ function Layout() {
   return (
     <div className="min-h-[100vh] bg-gray-600">
       <Header />
-      <div className="  px-4 py-14 sm:px-8 sm:pt-24 sm:pb-28">
+      <div className="  px-8 pt-20 pb-24 sm:px-8 sm:pt-24 sm:pb-28">
         <Outlet />
       </div>
       <BottomNav />

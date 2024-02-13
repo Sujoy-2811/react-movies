@@ -16,7 +16,7 @@ function BottomNav() {
     <FaSearch key={3} />,
   ];
   return (
-    <div className="w-full text-[3lg] cursor-pointer fixed  bottom-0 uppercase bg-[#39445a] p-2 text-white font-bold z-[100] sm:p-4 sm:text-[3xl]">
+    <div className="w-full py-4 cursor-pointer fixed  bottom-0 uppercase bg-[#39445a]  text-white font-bold z-[100] sm:p-4 sm:text-[3xl]">
       <ul className="flex justify-around">
         {NAVLIST.map((data, index) => (
           <NavItem key={data.link} data={data}>

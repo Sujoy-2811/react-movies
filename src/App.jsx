@@ -13,7 +13,6 @@ import { Home, Movies, Search, Series } from "./pages";
 import conf from "./conf/conf";
 
 function App() {
-  console.log(conf.apiKey);
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Layout />}>

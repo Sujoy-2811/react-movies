@@ -10,7 +10,6 @@ function Home() {
 
   if (isPending) return <div>Waiting</div>;
   if (!isPending && isError) return <div>Error</div>;
-  console.log(data.results[0]);
   return (
     <div>
       <ul className="grid grid-cols-2 gap-5 sm:grid-cols-5 sm:gap-8">

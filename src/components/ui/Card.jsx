@@ -12,7 +12,6 @@ function Card({
     first_air_date,
   },
 }) {
-  console.log(`${conf.posterImageSmall}${poster_path}`);
   return (
     <div className="border border-solid border-black  p-1 min-w-40 bg-black text-white flex flex-col items-center">
       <img

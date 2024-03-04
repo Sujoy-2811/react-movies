@@ -7,9 +7,26 @@ function Home() {
     queryKey: ["getTrending"],
     queryFn: http.getTrending,
   });
+  if (isError) {
+    console.log(error.message);
+  }
 
-  if (isPending) return <div>Waiting</div>;
-  if (!isPending && isError) return <div>Error</div>;
+  if (isPending)
+    return (
+      <div className=" w-full text-center text-gray-300  ">
+        <span className="text-red-100 font-bold ">Loading</span> [There is an
+        issue with the API in India. Please consider using a VPN as a temporary
+        solution.]
+      </div>
+    );
+  if (!isPending && isError)
+    return (
+      <div className="w-full text-center text-gray-300 ">
+        <span className="text-red-100  font-bold">Error</span> [There is an
+        issue with the API in India. Please consider using a VPN as a temporary
+        solution.]
+      </div>
+    );
   return (
     <div>
       <ul className="grid grid-cols-2 gap-5 sm:grid-cols-5 sm:gap-8">
